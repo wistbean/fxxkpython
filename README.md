@@ -7,20 +7,20 @@ python3学习资源、面试相关指南
 接下来会一点一点补充！
 
 
-# python3 基础知识
+## python3 基础知识
 
 - [趣味 python3 基础教程](https://mp.weixin.qq.com/s?__biz=MzU2ODYzNTkwMg==&mid=2247483945&idx=1&sn=7d69d9098ca784369445f40d38aea6d0&chksm=fc8bbab8cbfc33ae8261af991bfed77acd55b6d047ce025e257c57bf52fe532895bd6243159f&scene=18#wechat_redirect)
 
 - [python3 官方原汁原味教程](https://docs.python.org/zh-cn/3/tutorial/index.html)
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:525px; height:245px;" src="https://www.processon.com/embed/mind/5c9de118e4b034408de626b5"></iframe>
 
-# python 爬虫
 
-# python 数据分析
+## python 爬虫
 
-# python web开发
+## python 数据分析
 
-# python 机器学习
+## python web开发
+
+## python 机器学习
 
 
