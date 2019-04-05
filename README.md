@@ -14,6 +14,8 @@ python3学习资源、面试相关指南
 
 - [python3 官方原汁原味教程](https://docs.python.org/zh-cn/3/tutorial/index.html)
 
+- [李笑来：自学是门手艺](https://github.com/wistbean/the-craft-of-selfteaching)
+
 - [Python 基础和编码规范(视频教程)](https://cloud.tencent.com/developer/edu/course-1109)
 
 - [零基础入门学习Python(视频教程)](https://edu.aliyun.com/course/137/lesson/list?spm=5176.8764728.aliyun-edu-course-tab.2.232b188dxPRZWk&previewAs=guest)
