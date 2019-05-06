@@ -20,7 +20,7 @@ python3学习资源、面试相关指南
 
 - [零基础入门学习Python(视频教程)](https://edu.aliyun.com/course/137/lesson/list?spm=5176.8764728.aliyun-edu-course-tab.2.232b188dxPRZWk&previewAs=guest)
 
-
+- [learnpythonthehardway](https://learnpythonthehardway.org/python3/)
 
 ## python 爬虫
 
