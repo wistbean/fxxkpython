@@ -3,11 +3,11 @@
 
 #刚在macbook上安装了git 配置了github 测试clone fxxkpython，add文件和commit push
 >
-'''
+
 //文件添加到仓库（.代表提交所有文件）
 git add .
-//把文件提交到仓库
+>//把文件提交到仓库
 git commit -m "First Commit"
-//上传到github
+>//上传到github
 git push
-'''
+
