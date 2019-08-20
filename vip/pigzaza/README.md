@@ -2,6 +2,7 @@
 那就是在创建新文件之后输入“/”，第一个创建的文件就变成文件夹了，后面再继续输入就在此文件夹下创建一个新文件
 
 #刚在macbook上安装了git 配置了github 测试clone fxxkpython，add文件和commit push
+>
 '''
 //文件添加到仓库（.代表提交所有文件）
 git add .
