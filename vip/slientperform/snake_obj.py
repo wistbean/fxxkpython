@@ -55,6 +55,7 @@ def main():
 
     draw_rect(white_color, food_pos)
     pygame.display.update()
+    last_direction = 'right'
 
     while True:
         for event in pygame.event.get():
@@ -62,17 +63,29 @@ def main():
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
+                    if last_direction == 'right':
+                        continue
                     snake.head_pos[0] -= cell
                     snake.change_direction()
+                    last_direction = 'left'
                 if event.key == pygame.K_RIGHT:
+                    if last_direction == 'left':
+                        continue
                     snake.head_pos[0] += cell
                     snake.change_direction()
+                    last_direction = 'right'
                 if event.key == pygame.K_UP:
+                    if last_direction == 'down':
+                        continue
                     snake.head_pos[1] -= cell
                     snake.change_direction()
+                    last_direction = 'up'
                 if event.key == pygame.K_DOWN:
+                    if last_direction == 'up':
+                        continue
                     snake.head_pos[1] += cell
                     snake.change_direction()
+                    last_direction = 'down'
 
         caption.fill(black_color)
         draw_rect(white_color, food_pos)
