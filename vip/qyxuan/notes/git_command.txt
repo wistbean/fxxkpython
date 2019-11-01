@@ -1,0 +1,57 @@
+git 文件 有三种状态，工作区，暂存区，服务区
+
+
+
+git 命令行
+
+﻿git init    初始化
+
+git status    查看状态
+
+git log    查看操作日志
+
+git add test.txt    提交文件到暂存区
+
+git add .    提交所有文件到暂存区
+
+git commit -m "add test.txt"    提交文件到服务器
+
+git commit -m "finish my feature"    提交所有文件到服务器
+
+git commit --amend    撤回或修改提交操作
+
+git reset HEAD test.txt    撤销test.txt提交到暂存区
+
+git reset --soft HEAD~    撤消上一次暂存区提交到服务器操作
+
+git reset --hard HEAD~    直接退回到上一个版本
+
+git reset --hard id    退回到指定id的版本，id通过git log查看
+
+git branch    显示项目分支情况
+
+git branch qy    创建分支
+
+git checkout qy    当前分支切换到qy分支
+
+git checkout -b qy    创建并切换到新分支qy
+
+git merge fixbug    合并fixbug分支到 master上去
+
+git branch -d fixbug    删除分支
+
+git stash    代码暂存
+
+git stash apply    代码暂存恢复最近一个暂存记录
+
+git stash list    查看多个暂存记录
+
+git stash apply stash@{1}    恢复指定的暂存记录
+
+git push origin master    拉取（下载）主分支代码合并到当前分支
+
+fork项目之后，要先进入自己的远程仓打开刚才fork来的项目，复制带自己github仓的项目地址，再 git clone ， 而不是直接在别人的项目复制其项目地址，不然 git push origin master的时候没法提交。
+
+error操作： git clone https://github.com/wistbean/fxxkpython.git
+
+correct操作：git clone https://github.com/qyxuan/fxxkpython.git
