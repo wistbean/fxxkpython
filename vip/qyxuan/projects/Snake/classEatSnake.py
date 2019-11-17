@@ -58,13 +58,15 @@ class myPygameConfig(InitGameData):
 
 
     def initScoreFont(self):
-        self.fontColor = pygame.Color(150, 150, 150)
-        self.mygameFont = pygame.font.SysFont('font/Arial.ttf', 26)
+        self.ScoreColor = pygame.Color(150, 150, 150)
+        self.gameOverColor = pygame.Color(255, 0, 0)
+        self.myScoreFont = pygame.font.SysFont('font/Arial.ttf', 26)
+        self.mygameOverFont = pygame.font.SysFont('font/Arial.ttf', 50)
 
 
     def drawScore(self, score):
         # print('drawScore:{}'.format(score))
-        scoreSurf = self.mygameFont.render('Score:%s'%(score), True, self.fontColor)
+        scoreSurf = self.myScoreFont.render('Score:%s'%(score), True, self.ScoreColor)
         scoreRect = scoreSurf.get_rect()
         scoreRect.midtop = (self.width-50, 10)
         self.caption.blit(scoreSurf, scoreRect)
@@ -84,7 +86,7 @@ class myPygameConfig(InitGameData):
 
     def drawGameOver(self):
         print('GameOver')
-        gameOverSurf = self.mygameFont.render('Game Over!', True, self.fontColor)
+        gameOverSurf = self.mygameOverFont.render('Game Over!', True, self.gameOverColor)
         gameOverRect = gameOverSurf.get_rect()
         gameOverRect.midtop = (250, 200)
         self.caption.blit(gameOverSurf, gameOverRect)
