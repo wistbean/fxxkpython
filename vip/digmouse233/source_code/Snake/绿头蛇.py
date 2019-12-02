@@ -12,6 +12,8 @@ food_pos = [random.randrange(1, 50) * 10, random.randrange(1, 50) * 10]
 cell = 10
 head_pos = [250, 250]
 score = 0
+score_pos = (415, 20)
+end_pos = (250, 250)
 
 pygame.init()
 pygame.font.init()
@@ -20,11 +22,8 @@ clock = pygame.time.Clock()
 pygame.display.set_caption(game_title)
 caption = pygame.display.set_mode((caption_width, caption_height))
 
-my_font = pygame.font.SysFont('pingfangttc', 20, True)
-score_text = my_font.render('Your Score: {}'.format(score), True, white_color)
-textRect = score_text.get_rect()
-textRect.center = (415, 20)
-caption.blit(score_text, textRect)
+score_font = pygame.font.SysFont('pingfangttc', 20, True)
+end_font = pygame.font.SysFont('pingfangttc', 40, True)
 
 def draw_rect(color, position):
     pygame.draw.rect(caption, color, pygame.Rect(position[0], position[1], cell, cell))
@@ -52,7 +51,13 @@ def change_dirction(head_pos):
         score += 1
         print(score)
 
-    if hit_the_self() or hit_the_wall():
+    if hit_the_self() or hit_the_wall():                                        # 游戏结束界面未完成
+        end_text = end_font.render('Game Over!', True, green_color)
+        end_rect = end_text.get_rect()
+        end_rect.center = end_pos
+        caption.blit(end_text, end_rect)
+        pygame.display.update()
+        pygame.time.wait(500)
         pygame.quit()
 
 def main():
@@ -88,8 +93,10 @@ def main():
             draw_rect(green_color, snake_pos[0])
         draw_rect(white_color, food_pos)
 
-        score_text = my_font.render('Your Score: {}'.format(score), True, white_color)
-        caption.blit(score_text, textRect)
+        score_text = score_font.render('Your Score: {}'.format(score), True, white_color)
+        score_rect = score_text.get_rect()
+        score_rect.center = score_pos
+        caption.blit(score_text, score_rect)
 
         pygame.display.update()
         clock.tick(10)
