@@ -16,6 +16,17 @@ class InitGameData:
         self.width = width
         self.heigh = heigh
 
+    def MyInitPygame(self):
+        pygame.init()
+
+    def ScoreColor(self):
+        self.fontColor = pygame.Color(150, 150, 150)
+        return self.fontColor
+
+    def MyGameFont(self):
+        self.mygameFont = pygame.font.SysFont('font/Arial.ttf', 26)
+        return self.mygameFont
+
     def hit_the_self(self):
         if self.snake_init_pos[0] in self.snake_init_pos[1:]:
             return True
@@ -29,19 +40,26 @@ class InitGameData:
             return False
 
 class myPygameConfig(InitGameData):
+    def __init__(self, width, heigh):
+        super().__init__(width, heigh)
+        self.caption = self.MyMode()
+        self.mygameFont = super().MyGameFont()
+        self.fontColor = super().ScoreColor()
 
     def setTitle(self, game_title):
         pygame.display.set_caption(game_title)  #设置标题
 
-    def initPygame(self):
-        pygame.init()
+
+
+    def MyMode(self):
+        self.caption = pygame.display.set_mode((self.width, self.heigh)) #画布，注意 双括号
+        return self.caption
 
     def initClock(self):
         clock = pygame.time.Clock()
         return clock
 
     def getCaption(self):
-        self.caption = pygame.display.set_mode((self.width, self.heigh)) #画布，注意 双括号
         return self.caption
 
     def initBackGroundMusic(self):
@@ -56,17 +74,9 @@ class myPygameConfig(InitGameData):
         foodSound = pygame.mixer.Sound("music/eat.wav") #Sound不支持mp3
         return foodSound
 
-
-    def initScoreFont(self):
-        self.ScoreColor = pygame.Color(150, 150, 150)
-        self.gameOverColor = pygame.Color(255, 0, 0)
-        self.myScoreFont = pygame.font.SysFont('font/Arial.ttf', 26)
-        self.mygameOverFont = pygame.font.SysFont('font/Arial.ttf', 50)
-
-
     def drawScore(self, score):
         # print('drawScore:{}'.format(score))
-        scoreSurf = self.myScoreFont.render('Score:%s'%(score), True, self.ScoreColor)
+        scoreSurf = self.mygameFont.render('Score:%s'%(score), True, self.fontColor)
         scoreRect = scoreSurf.get_rect()
         scoreRect.midtop = (self.width-50, 10)
         self.caption.blit(scoreSurf, scoreRect)
@@ -74,32 +84,13 @@ class myPygameConfig(InitGameData):
 
     # # 疑问：这个函数调用self.mygameOverFont总是报错
     # # AttributeError: 'setGameCaption' object has no attribute 'mygameFont'
-
-    # 回复：这是你的代码问题，之前你之所以会报错（AttributeError: 'setGameCaption' object has no attribute 'mygameFont'）
-    # 是因为你那样写在执行 drawScore 过程中 self 引用的是 setGameCaption（类名不应该这么写哈，对象名称一般是名词而不是动词） 对象，
-    # 而你的当前对象没有 mygameFont 就报错了哦。
-    # 代码的调用已经帮你修改了一下，你在写面向对象的过程，应该多注意继承之间的关系，
-    # 不要为了面向而面向、继承而继承，比如你这里的初始化其实可以直接写到同一个类里面的，另外注意类名的书写方式，
-    # 类名应该是大写字母开头的驼峰写法，看得出来，你很用心在写这个小游戏，也理解了类之间的继承和写法，
-    # 但是有些细节还是需要自己多注意一下，相信你多练会越来越棒！
-
-
     def drawGameOver(self):
         print('GameOver')
-        gameOverSurf = self.mygameOverFont.render('Game Over!', True, self.gameOverColor)
+        gameOverSurf = self.mygameFont.render('Game Over!', True, self.fontColor)
         gameOverRect = gameOverSurf.get_rect()
         gameOverRect.midtop = (250, 200)
         self.caption.blit(gameOverSurf, gameOverRect)
         pygame.display.flip()
-
-    # def drawGameOver(self):
-    #     gameOverColor = pygame.Color(250,0, 0)
-    #     mygameFont = pygame.font.SysFont('font/Arial.ttf', 60)
-    #     gameOverSurf = mygameFont.render('Game Over!', True, gameOverColor)
-    #     gameOverRect = gameOverSurf.get_rect()
-    #     gameOverRect.midtop = (250, 200)
-    #     self.caption.blit(gameOverSurf, gameOverRect)
-    #     pygame.display.flip()
 
     def gameQuit(self):
         self.drawGameOver()
@@ -116,6 +107,9 @@ class setGameCaption(myPygameConfig):
     def __init__(self, width, heigh):
         super().__init__(width, heigh)
         self.caption = super().getCaption()
+        self.mygameFont = super().MyGameFont()
+        self.fontColor = super().ScoreColor()
+
 
     def draw_rect(self, color, position):
         pygame.draw.rect(self.caption, color, pygame.Rect(position[0], position[1], super().cell, super().cell)) #绘制矩阵
@@ -146,25 +140,22 @@ class setGameCaption(myPygameConfig):
 def main():
     capWidth = 500
     capHeigh = 500
-    # myinitdata = InitGameData(capWidth, capHeigh)
+    myinitdata = InitGameData(capWidth, capHeigh)
+    myinitdata.MyInitPygame()
+    myPygame = myPygameConfig(capWidth, capHeigh)
+    myPygame.setTitle("EatSnake")
 
-    # myPygame = myPygameConfig(capWidth, capHeigh)
-    # myPygame.setTitle("EatSnake")
-    # myPygame.initPygame()
-    # caption = myPygame.getCaption()
-    # myPygame.initBackGroundMusic()
-    # myPygame.initScoreFont()
+
+    myPygame.initBackGroundMusic()
+
     mySetCap = setGameCaption(capWidth, capHeigh)
-    mySetCap.setTitle("EatSnake")
-    mySetCap.initPygame()
-    mySetCap.initBackGroundMusic()
-    mySetCap.initScoreFont()
 
-    for pos in mySetCap.snake_init_pos:
-        mySetCap.draw_rect(mySetCap.white_color, pos)
 
-    mySetCap.draw_rect(mySetCap.red_color, mySetCap.food__pos)
-    mySetCap.drawScore(0)
+    for pos in myinitdata.snake_init_pos:
+        mySetCap.draw_rect(myinitdata.white_color, pos)
+
+    mySetCap.draw_rect(myinitdata.red_color, mySetCap.food__pos)
+    myPygame.drawScore(0)
     pygame.display.update()
 
     while 1:
@@ -174,27 +165,27 @@ def main():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    mySetCap.head_pos[0] -= mySetCap.cell
-                    mySetCap.change_direction(mySetCap.head_pos)
+                    myinitdata.head_pos[0] -= myinitdata.cell
+                    mySetCap.change_direction(myinitdata.head_pos)
                 elif event.key == pygame.K_RIGHT:
-                    mySetCap.head_pos[0] += mySetCap.cell
-                    mySetCap.change_direction(mySetCap.head_pos)
+                    myinitdata.head_pos[0] += myinitdata.cell
+                    mySetCap.change_direction(myinitdata.head_pos)
                 elif event.key == pygame.K_UP:
-                    mySetCap.head_pos[1] -= mySetCap.cell
-                    mySetCap.change_direction(mySetCap.head_pos)
+                    myinitdata.head_pos[1] -= myinitdata.cell
+                    mySetCap.change_direction(myinitdata.head_pos)
                 elif event.key == pygame.K_DOWN:
-                    mySetCap.head_pos[1] += mySetCap.cell
-                    mySetCap.change_direction(mySetCap.head_pos)
+                    myinitdata.head_pos[1] += myinitdata.cell
+                    mySetCap.change_direction(myinitdata.head_pos)
 
         mySetCap.setBackGround()
-        mySetCap.draw_rect(mySetCap.red_color, mySetCap.food__pos)
-        for pos in mySetCap.snake_init_pos:
-            mySetCap.draw_rect(mySetCap.white_color, pos)
+        mySetCap.draw_rect(myinitdata.red_color, mySetCap.food__pos)
+        for pos in myinitdata.snake_init_pos:
+            mySetCap.draw_rect(myinitdata.white_color, pos)
 
-        mySetCap.drawScore(mySetCap.score)
+        myPygame.drawScore(mySetCap.score)
         pygame.display.update()
 
-        mySetCap.initClock().tick(10)
+        myPygame.initClock().tick(10)
 
 if __name__ == '__main__':
     main()
