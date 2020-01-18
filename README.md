@@ -5,7 +5,10 @@
 https://vip.fxxkpython.com
 
 最近更新：
-
+- [Python 爬阶梯 |什么是元编程、Python 元类？](https://vip.fxxkpython.com/?p=1548)
+- [Python 爬阶梯 | 什么时候 Python 需要和其它语言（Java、C）结合开发以及 Python 如何调用 Java ？](https://vip.fxxkpython.com/?p=1533)
+- [阶段性优化 | 让我们的 VIP 网站变得更美好](https://vip.fxxkpython.com/?p=1528)
+- [Python 爬阶梯 | 在 Python 中，如何去调用 C 语言？](https://vip.fxxkpython.com/?p=1518)
 - [Python 爬阶梯 | 魔法 __slots__ 的妙用](https://vip.fxxkpython.com/?p=1497)
 - [Python 爬阶梯 | 必知必会 Python 中 sys 模块的常用文件操作](https://vip.fxxkpython.com/?p=1479)
 - [Python 爬阶梯 | 必知必会 Python 中 OS 模块的常用文件操作](https://vip.fxxkpython.com/?p=1461)
