@@ -6,7 +6,7 @@ class Person: #创建Person类
         self.age=age
     def say(self,something): #创建say说方法 
         return '{0}说{1}'.format(self.name,something)
-    def eat(self,food):   #创建food吃方法
+    def eat(self,food):   #创建吃方法
         return'{0}吃{1}'.format(self.name,food)
 class Yellow(Person):
         pass
