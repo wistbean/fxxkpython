@@ -63,11 +63,12 @@ class Person:
     
 # 子类
 class Yellow_people(Person):
+  # 子类默认继承父类 __init__() 方法所以不需要重写 
   def eat(self, food):
     print("{} eats {} quickly".format(self.name, food))
 ```
 
-当 **单继承** 子类定义类与父类相同的属性或方法时，使用父类名称调用父类属性或方法
+当 **单继承** 子类定义类与父类相同的属性或方法时，使用父类名称或 super() 调用父类属性或方法
 
 ```python
 # 父类
@@ -78,6 +79,13 @@ class Person:
 class Yellow_prople(Person):
   attr = '999'
   def print_sone(self):
-    print("子类调用了父类的变量: ", Person.attr)		# 子类使用父类名称调用父类属性
+    print("子类变量：", attr)
+    # 子类使用父类名称调用父类属性
+    print("子类调用了父类的变量: ", Person.attr)		
+    print("子类调用了父类的变量:", super().attr)
+======================= OUTPUT ============================
+子类变量：999
+子类调用了父类的变量: 666
+子类调用了父类的变量: 666
 ```
 
