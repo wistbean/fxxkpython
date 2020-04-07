@@ -34,7 +34,7 @@ element in xxx		# return Ture / False
 xxx.add(new_element)			# only as one element
 ```
 
-2. 调用 set 的 update 方法向 set 集合中添加元素（被拆分为多个元素）:
+2. 调用 set 的 update 方法向 set 集合中添加元素（仅限 imutable 类型并被拆分为多个元素）:
 
 ```python
 xxx.update(new_elements)	  # seperate as many elements

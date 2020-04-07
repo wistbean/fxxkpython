@@ -24,7 +24,7 @@
 5. 回车：\\r
 6. 退格：\\b
 
-如果不想转义则在转义字符前加 r:
+如果不想转义则在字符串前加 r:
 
 ```python
 str = r"Hello\nWorld!"
@@ -42,7 +42,7 @@ Hello\nWorld!
 str = str_1 + str_2
 ```
 
-2. 使用 += 拼接 string (prefer):
+2. 使用 += 拼接 string (性能更好):
 
 ```python
 str_1 += str_2
@@ -88,10 +88,10 @@ str.find("xxx")
 2. 使用 replace 方法用 xxx_2 替换 xxx_1:
 
 ```python
-str.replace("xxx_1", xxx_2)
+str.replace("xxx_1", "xxx_2")
 ```
 
-3. 使用 split 方法对字符串中的特定字符 'x' 进行分割:
+3. 使用 split 方法对字符串中的特定字符 'x' 两边进行分割:
 
 ```python
 str.split('x')

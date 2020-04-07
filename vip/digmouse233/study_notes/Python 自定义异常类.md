@@ -15,7 +15,7 @@ raise MyException('xxx')	# output 'xxx'
 # 例子：定义返回错误信息的方法
 class MyException(Exception):
   def __init__(self, value):
-    super().__init__(sekf)
+    super().__init__(self)
     self.value = value
   
   def __str__(self):
