@@ -5,6 +5,18 @@
 https://vip.fxxkpython.com
 
 最近更新：
+
+- [Python 爬阶梯 | Python 操作socket 之聊天室客户端的实现](https://vip.fxxkpython.com/?p=4560)
+- [Python 爬阶梯 | Python 操作socket 之聊天室服务端的实现](https://vip.fxxkpython.com/?p=4514)
+- [Python 爬阶梯 |什么是 Python 的 socket 编程](https://vip.fxxkpython.com/?p=4452)
+- [Python 爬阶梯 | 类的变量和实例的变量到底有什么区别？](https://vip.fxxkpython.com/?p=4149)
+- [Python 爬阶梯 | 如何快速找到高质量的内置库以及第三方库](https://vip.fxxkpython.com/?p=4088)
+- [Python 爬阶梯 | 什么是实例方法和类方法以及静态方法？](https://vip.fxxkpython.com/?p=4045)
+- [Python 爬阶梯 | 为什么要在你的 Class 里面定义 __repr__ 方法？](https://vip.fxxkpython.com/?p=4017)
+- [Python 爬阶梯 | 自定义对象的拷贝](https://vip.fxxkpython.com/?p=4001)
+- [Python 爬阶梯 | 如何对对象进行拷贝，深拷贝和浅拷贝的区别是什么？](https://vip.fxxkpython.com/?p=3953)
+- [Python 爬阶梯 | 轻松理解对象比较：== 和 is 的区别是啥？](https://vip.fxxkpython.com/?p=3911)
+- [Python 爬阶梯 | 元类的创建使用](https://vip.fxxkpython.com/?p=1560)
 - [Python 爬阶梯 |什么是元编程、Python 元类？](https://vip.fxxkpython.com/?p=1548)
 - [Python 爬阶梯 | 什么时候 Python 需要和其它语言（Java、C）结合开发以及 Python 如何调用 Java ？](https://vip.fxxkpython.com/?p=1533)
 - [阶段性优化 | 让我们的 VIP 网站变得更美好](https://vip.fxxkpython.com/?p=1528)
