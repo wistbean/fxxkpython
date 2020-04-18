@@ -6,6 +6,21 @@ https://vip.fxxkpython.com
 
 最近更新：
 
+# Python VIM
+
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器 ——在 Vim 中实现 Python 源码的跳转](https://vip.fxxkpython.com/?p=4414)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器 ——在 Vim 中调试你的 Python 代码](https://vip.fxxkpython.com/?p=4402)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器 ——添加代码 pep8 检测修复，代码编译执行](https://vip.fxxkpython.com/?p=4373)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器之代码自动补全](https://vip.fxxkpython.com/?p=4346)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器之主题美化](https://vip.fxxkpython.com/?p=4273)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器之 Vim 的 Python 语法基础配置](https://vip.fxxkpython.com/?p=4262)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器 ——让你的 Vim 支持 Python 环境](https://vip.fxxkpython.com/?p=4247)
+- [工具篇 | 教你弄一个酷炫的 Python Vim编辑器 ——插件的安装](https://vip.fxxkpython.com/?p=4164)
+
+
+
+# Python 进阶
+
 - [Python 爬阶梯 | Python 操作socket 之聊天室客户端的实现](https://vip.fxxkpython.com/?p=4560)
 - [Python 爬阶梯 | Python 操作socket 之聊天室服务端的实现](https://vip.fxxkpython.com/?p=4514)
 - [Python 爬阶梯 |什么是 Python 的 socket 编程](https://vip.fxxkpython.com/?p=4452)
@@ -49,6 +64,9 @@ https://vip.fxxkpython.com
 - [Python 爬阶梯 | Python 中各种下划线的骚操作：_、_xx、xx_、__xx、__xx__、_classname__xx﻿](https://vip.fxxkpython.com/?p=1085)
 - [Python 爬阶梯 | 如何理解 Python 中的闭包](https://vip.fxxkpython.com/?p=1075)
 - [Python 爬阶梯 | 如何使用 lambda 一行实现一个函数](https://vip.fxxkpython.com/?p=1053)
+
+# Python 快速入门
+
 - [阶段性总结 | 恭喜你，进入了 Python 的大门](https://vip.fxxkpython.com/?p=1046)
 - [Python 快速入门 | pip 常用的各种骚操作是怎样的？](https://vip.fxxkpython.com/?p=1027)
 - [Python快速入门 | 如何在各个 Python 版本中切换自如：虚拟环境](https://vip.fxxkpython.com/?p=1011)
@@ -79,6 +97,9 @@ https://vip.fxxkpython.com
 - [Python快速入门 | 这就是Python的数据类型](https://vip.fxxkpython.com/?p=476)
 - [Python快速入门 | Python快速入门所需要的最少且必要的知识有哪些？](https://vip.fxxkpython.com/?p=473)
 - [Python快速入门 | 前言，为什么说咱们不搞 Python2.x 而搞 Python3.x](https://vip.fxxkpython.com/?p=463)
+
+# GitHub 骚操作
+
 - [文字版|第一阶段总结](https://vip.fxxkpython.com/?p=431)
 - [音频公开版 | vip第一阶段总结](https://vip.fxxkpython.com/?p=436)
 - [一定得会的 GitHub 骚操作之 我这些年来用到的 GitHub 超级无敌牛逼且有用的技巧都分享给你](https://vip.fxxkpython.com/?p=408)
@@ -88,6 +109,9 @@ https://vip.fxxkpython.com
 - [一定得会的 GitHub 骚操作之 创建、配置、授权、克隆、推送你的 GitHub 仓库](https://vip.fxxkpython.com/?p=353)
 - [一定得会的 GitHub 骚操作之 GitHub 里面的各个模块是干嘛用的？](https://vip.fxxkpython.com/?p=331)
 - [一定得会的 GitHub 骚操作之 GitHub 到底有什么用？](https://vip.fxxkpython.com/?p=324)
+
+# Git 骚操作
+
 - [史上最易懂且可操作的 Git 教程 08 | 你一定会遇到的问题：git 分支合并的时候冲突了怎么办？](https://vip.fxxkpython.com/?p=303)
 - [史上最易懂且可操作的 Git 教程 07 | 你一定会遇到的问题：如何做好 git 分支的暂存](https://vip.fxxkpython.com/?p=286)
 - [史上最易懂且可操作的 Git 教程 06 |模拟一个真实操作场景让你彻底理解 git 分支的合并、删除等操作](https://vip.fxxkpython.com/?p=252)
@@ -97,6 +121,9 @@ https://vip.fxxkpython.com
 - [史上最易懂且可操作的 Git 教程 02 | 流程走完后告诉你是啥意思： Git 到底是如何工作的](https://vip.fxxkpython.com/?p=127)
 - [史上最易懂且可操作的 Git 教程 01 | 先带你快速使用一遍 Git 管理你的项目文件](https://vip.fxxkpython.com/?p=108)
 - [史上最易懂且可操作的 Git 教程 00 | 为什么说分布式版本控制很重要？](https://vip.fxxkpython.com/?p=98)
+
+# 帅b的骚话
+
 - [把我这些年来用到的有效且有用的学习方法统统都告诉你（下）](https://vip.fxxkpython.com/?p=93)
 - [把我这些年来用到的有效且有用的学习方法统统都告诉你（上）](https://vip.fxxkpython.com/?p=91)
 - [为什么我建议你买多一个显示器，写代码和学习的时候使用双屏](https://vip.fxxkpython.com/?p=83)
