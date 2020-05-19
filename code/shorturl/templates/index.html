@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>短链接生成器</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>短链接生成器</h1>
+  <p>短就完事了</p> 
+</div>
+  
+<div class="container">
+    <form action="/gen_short_url"  method="post">
+        <div class="form-group">
+            <label for="usr">请把你的长长长长链接复制到这里:</label>
+            <input type="text" name="long-url" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">生成</button>
+    </form>
+</div>
+
+{%if short_url%}
+<div class="container">
+    <label>呐～你要的短链接：</label>
+    <a href={{short_url}}>{{short_url}}</a>
+</div>
+{%endif%}
+
+
+</body>
+</html>
