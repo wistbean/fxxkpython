@@ -65,6 +65,24 @@ https://vip.fxxkpython.com
 - [Python 爬阶梯 | 如何理解 Python 中的闭包](https://vip.fxxkpython.com/?p=1075)
 - [Python 爬阶梯 | 如何使用 lambda 一行实现一个函数](https://vip.fxxkpython.com/?p=1053)
 
+# Python 数据可视化
+
+- [Python 数据可视化 14 | 使用 pycharts 可视化微信好友数据](https://vip.fxxkpython.com/?p=5730)
+- [Python 数据可视化 13 | 使用 Seaborn 可视化全球的疫情数据](https://vip.fxxkpython.com/?p=5667)
+- [Python 数据可视化 12 | 使用 matplotlib 可视化分析股票数据](https://vip.fxxkpython.com/?p=5643)
+- [Python 数据可视化 11 | 数据可视化库 pyecharts 的使用](https://vip.fxxkpython.com/?p=5509)
+- [Python 数据可视化 10 | 数据可视化库 Plotly 的使用](https://vip.fxxkpython.com/?p=5434)
+- [Python 数据可视化 09 | 数据可视化库 seaborn 的使用](https://vip.fxxkpython.com/?p=5375)
+- [Python 数据可视化 08 | 数据可视化库 matplotlib 的使用](https://vip.fxxkpython.com/?p=5359)
+- [Python 数据可视化 07 | pandas 数据操作之排序，数据统计计算，数据分类](https://vip.fxxkpython.com/?p=5254)
+- [Python 数据可视化 06 | pandas 数据操作之I/O 和数据清理](https://vip.fxxkpython.com/?p=5207)
+- [Python 数据可视化 05 | pandas 数据操作之DataFrame](https://vip.fxxkpython.com/?p=5181)
+- [Python 数据可视化 0４ | pandas 数据操作之Series](https://vip.fxxkpython.com/?p=5162)
+- [Python 数据可视化 03 | NumPy 数据操作之文件流](https://vip.fxxkpython.com/?p=5099)
+- [Python 数据可视化 02 | NumPy 数据操作之 Array](https://vip.fxxkpython.com/?p=5075)
+- [Python 数据可视化 01 | Juypter 安装与使用](https://vip.fxxkpython.com/?p=4628)
+- [Python 数据可视化 00 | 前言](https://vip.fxxkpython.com/?p=4614)
+
 # Python 快速入门
 
 - [阶段性总结 | 恭喜你，进入了 Python 的大门](https://vip.fxxkpython.com/?p=1046)
