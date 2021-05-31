@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>抖音视频下载神器</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>抖音视频下载</h1>
+  <p>就是这么简单</p>
+</div>
+  
+<div class="container">
+    <form action="/download_video"  method="post">
+        <div class="form-group">
+            <label for="usr">请把你要下载的抖音视频地址复制到下面:</label>
+            <input type="text" name="video-url" class="form-control" placeholder="https://v.douyin.com/emMkh49/">
+        </div>
+        <button type="submit" class="btn btn-primary">一键下载</button>
+    </form>
+    {%if message%}
+    <div class="alert alert-warning" role="alert">
+        {{message}}
+    </div>
+    {%endif%}
+</div>
+
+{%if video%}
+<br/><br/>
+<div class="container" align="center">
+    <video autoplay loop controls muted class="embed-responsive-item">
+        <source src="{{video}}" type="video/mp4">
+    </video>
+</div>
+{%endif%}
+
+
+</body>
+</html>
