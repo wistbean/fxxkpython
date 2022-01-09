@@ -4,44 +4,40 @@ from threading import Thread
 client = {}
 addresses = {}
 
-accept_num = 10
-
-host = '127.0.0.1'
-port = 8080
+ACCEPT_NUM = 10
+HOST = '127.0.0.1'
+PORT = 6666
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((host, port))
-
+s.bind((HOST, PORT))
 
 def handle_client_in(conn, addr):
     nikename = conn.recv(1024).decode('utf8')
-    welcome = f'欢迎 {nikename} 加入聊天室'
     client[conn] = nikename
-    brodcast(bytes(welcome, 'utf8'))
+    # 群发消息
+    broadcast(bytes(f'系统：{nikename}来了！！！', 'utf8'))
 
+    # 转发用户的消息
     while True:
-
         try:
             msg = conn.recv(1024)
-            brodcast(msg, nikename+':')
+            broadcast(msg, nikename+':')
         except:
             del client[conn]
-            brodcast(bytes(f'{nikename} 离开聊天室', 'utf8'))
+            broadcast(bytes(f'系统：{nikename}离开了！', 'utf8'))
 
-
-def brodcast(msg, nikename=''):
+def broadcast(msg, nikename=''):
     for conn in client:
-        print(msg)
         conn.send(bytes(nikename, 'utf8') + msg)
 
-
 if __name__ == '__main__':
-    s.listen(accept_num)
-    print('服务器已经开启，正在监听用户的请求.....')
+    s.listen(ACCEPT_NUM)
+    print('服务器已经开启，正在监听用户的请求')
 
     while True:
         conn, address = s.accept()
-        print(address, '已经建立连接')
-        conn.send('欢迎你来到帅帅的聊天室，请输入你的昵称进行聊天'.encode('utf8'))
+        print(f'{address} 已经建立连接')
+        # 给当前的连接对象发送消息
+        conn.send('欢迎来到深夜陪聊群，请输入你的昵称开始嗨！'.encode('utf8'))
         addresses[conn] = address
         Thread(target=handle_client_in, args=(conn, address)).start()
