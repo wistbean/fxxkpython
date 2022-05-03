@@ -1,45 +1,39 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-  <title>抖音视频下载神器</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>抖音下载神器</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-<div class="jumbotron text-center">
-  <h1>抖音视频下载</h1>
-  <p>就是这么简单</p>
-</div>
-  
-<div class="container">
-    <form action="/download_video"  method="post">
-        <div class="form-group">
-            <label for="usr">请把你要下载的抖音视频地址复制到下面:</label>
-            <input type="text" name="video-url" class="form-control" placeholder="https://v.douyin.com/emMkh49/">
-        </div>
-        <button type="submit" class="btn btn-primary">一键下载</button>
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">抖音下载神器</h1>
+        <p>下载短视频，如此简单</p>
+      </div>
+    </div>
+
+  <div class="container">
+    <form action="download_video", method="post">
+      <div class="mb-3">
+        <label class="form-label">请把你要下载的抖音视频链接地址复制到下面：</label>
+        <input type="text" name="video_url" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">一键下载</button>
     </form>
-    {%if message%}
+    {%if msg%}
     <div class="alert alert-warning" role="alert">
-        {{message}}
+      {{msg}}
     </div>
     {%endif%}
-</div>
-
-{%if video%}
-<br/><br/>
-<div class="container" align="center">
-    <video autoplay loop controls muted class="embed-responsive-item">
-        <source src="{{video}}" type="video/mp4">
-    </video>
-</div>
-{%endif%}
-
-
-</body>
+  </div>
+  {%if video%}
+  <div class="container" align="center">
+    <embed src="{{video}}" type="video/mp4" width="240" height="520">
+    <a href="{{video}}" target="_blank">获取原视频</a>
+  </div>
+  {%endif%}
+  </body>
 </html>
