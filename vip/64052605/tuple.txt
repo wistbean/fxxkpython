@@ -1,0 +1,27 @@
+元组只能整个删除：del tuple
+元组不支持增删元素，只能合并：('亲爱的',)+songs
+ ('亲爱的', ....)
+可见元组合并只能放最前面,并且记得加逗号
+多项赋值，其实是把元组赋值给变量：
+a= 111,222,'fxxkpython'
+type(a)
+tuple
+
+此时可以反向解包：
+b,c,d = a
+>>>b
+>>>111
+>>>c
+>>>222
+>>>d
+>>>'fxxkpython'
+
+函数的参数带*,网上解释是打包的意思
+def print_value(*val):
+	print(val)
+
+print_value(a)
+>>>((111,222,'fxxkpython'),)
+
+print_value(*a)
+>>>(111,222,'fxxkpython')

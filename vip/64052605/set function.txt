@@ -1,0 +1,57 @@
+创建集合set:
+
+方法一：
+ b = {1,2,3,4,5}
+
+方法二:
+
+ b = set ((1,2,3,4))
+ b = set ([1,2,3,4])
+相当于将其他类型变为set
+
+set无序，无键值对，不允许重复，元素是不可变类型
+
+创建空set只能用set()
+
+
+由于set元素不重复，即使设置了重复值，它自身也会去重，
+这个特性可以用来对list去重，比如将list转换成set时
+
+查：
+
+value in set
+
+增:
+add的用法，增加的数据类型不变
+set.add()
+
+改（追加）：
+*update（）的用法，跟set（）类似，无论是元组还是list，都转变为单独的元素
+例子：
+>>> a = {1,2,(1,2),'handsomeb'}
+>>> a.update(['age','len'])
+>>> a
+{1, 2, (1, 2), 'age', 'handsomeb', 'len'}
+
+删：
+remove() or discard()
+discard()即使set里面没有这个元素，也不会报错.
+
+清空：
+clear()
+
+并集:
+a.union(b)
+
+交集:
+a.intersection(b)
+
+判断子集:
+
+a.issubset(b)
+
+判断父集：
+
+b.issuperset(a)
+
+

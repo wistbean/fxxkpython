@@ -1,0 +1,19 @@
+海象运算符,可以直接在表达式里面给变量赋值: :=
+
+a +=1:
+
+a:= a+1
+例子：
+import random
+
+
+a = []
+
+while (num:=random.randint(1,10))!=6:
+    a.append(num)
+
+print (a)
+
+参数位置限制：
+
+def f(a,b,/,c,d,*,e,f):/之前的参数不带key，*号之后的参数必须带key，两者之间的参数随意

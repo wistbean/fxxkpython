@@ -1,0 +1,20 @@
+枚举:for i,v in enumerate(list):
+       print ('index%s,value%s'%(i,v))
+追加单一数据:list.append(value)
+追加列表中的所有数据：list.extend([1,2,3])
+	list = [...,[1,2,3],1,2,3]
+插入：list.insert(index,value)
+删除指定value：list.remove(value)
+删除指定位置value,默认最后一位：list.pop()
+删除切片：del list[2:5]
+删除全部数据：list.clear()
+获取索引：list.index("value")
+获取value出现的次数：list.count("value")
+倒序：list.reverse()
+排序：list.sort()
+按长度排序：
+       def length(item):
+	   return len(item)
+       list.sort(key=length)
+复制列表：
+	list1=list.copy()

@@ -1,0 +1,8 @@
+函数使用全局变量：
+
+global variable
+
+函数使用外层函数的变量：
+
+nonlocal variable
+
