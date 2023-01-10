@@ -1,0 +1,22 @@
+类和实例的关系：
+
+类相当于一个壳，一个框架，当我们录入信息到这个框架后，就成为一个对象实例。
+
+例子：
+
+class Person():
+	attr = "PP"
+	def __init__(self,name,age):
+		self.name = name
+		self.age = age
+
+handsomeb = Person("小帅b",18)
+print (handsomeb.name)
+print (handsomeb.age)
+print (handsomeb.attr)
+
+self指对象本身，比如以上例子实例化handsomeb，self就是指handsomeb，当引用类里面的变量时，写法就是
+handsomeb.name
+handsomeb.age
+handsomeb.attr
+
