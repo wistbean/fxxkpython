@@ -1,0 +1,3 @@
+import XXX as XXX **as的作用是重命名
+
+package：包是应对放在不同位置的同名模块同时在一个程序中被引用。

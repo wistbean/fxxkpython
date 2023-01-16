@@ -1,0 +1,10 @@
+super（）的用法：
+
+super是根据MRO顺序来获取到前一个类的：
+
+也可以用具体的写法：
+
+super（Son，self），表示son的前一个类
+
+super（Yellowpeoplefather），表示取Yellowpeoplefather的前一个类，也就是Whitepeoplemother
+
