@@ -1,0 +1,24 @@
+string的方法：
+
+find，返回索引
+
+replace
+
+写法：str.replace(old,new)
+
+split
+
+str.split('')
+
+去掉空格和换行：strip
+
+str.strip()
+
+大小写置换：lower()  upper()
+
+判断以什么开头，以什么结尾：
+
+startwith，endwith
+
+返回 True/False
+

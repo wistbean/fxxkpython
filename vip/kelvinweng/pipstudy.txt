@@ -1,0 +1,27 @@
+pip的运用:
+
+升级：pip install --upgrade 库名
+
+指定版本：pip install "库名==版本号"
+
+查看库版本：pip show 库名
+
+把库生成一个文件保存下来：pip freeze>requirement.txt
+
+直接按照requirement里面的库列表：
+pip install -r requirement.txt
+
+使用镜像地址来安装库：
+
+pip install -i 镜像地址 库名
+
+以后的库都在镜像地址中下载：
+
+在users\用户名\目录下创建pip目录，里面创建pip.ini文件，内容输入
+
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+
+其中pypi.douban.com是镜像地址

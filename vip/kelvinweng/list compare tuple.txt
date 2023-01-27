@@ -1,0 +1,7 @@
+看内存占用：variable.__sizeof__()
+tuple和list相互转换：
+my_list = [1,2,3,4]
+my_tuple = tuple(my_list)
+my_list = list(my_tuple)
+
+

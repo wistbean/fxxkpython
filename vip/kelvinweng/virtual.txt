@@ -1,0 +1,7 @@
+venv模块：
+	搭建虚拟环境，可以在指定位置创建指定的python3版本环境
+win10搭建虚拟环境：
+	python -m evnv 在自己指定的文件路径创建虚拟环境，找到路径下的Scripts路径，在cmd中
+输入activate.bat，环境激活。
+virtualenv模块：
+	python2的模块，功能同上

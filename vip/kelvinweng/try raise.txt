@@ -1,0 +1,44 @@
+处理异常：是为了让程序能够一直执行，不会一遇到错误就挂了
+
+try...except...
+
+try:
+    x = 1/0
+
+except ZeroDivisionError as err:
+    print("程序发生异常，错误信息：{}".format(err))
+
+ZeroDivisionError 是python内置的异常类型
+
+except可以写多个，而python只会根据异常类型进入匹配的except
+
+简洁化：
+
+try：
+   x = 1/0
+
+except (IndexError,ZeroDivisionError,IndexError) as err:
+	print ("程序发生异常，错误信息{}".format(err))
+
+finally: 这个放在except后面使用，一定会执行
+
+
+
+try...except...else:
+
+else是当异常不存在时，执行else的语句
+
+try...except...else...finally
+
+raise:异常抛出
+
+raise Exception('自己抛出一个异常')
+
+*这里Exception相当于object，是一个超类，
+
+自定义异常：
+
+class MyException(Exception):
+      pass
+
+raise MyException("泡醋一个自己定义的异常")

@@ -1,0 +1,54 @@
+字典的key要用不可变类型，而且是唯一的，不能重复
+
+获取所有的key：
+list(dist)
+
+字典中使用循环，通过items来获取key和value:
+	for k, v in dict.items():
+	     print('key:%s,value:%s'%(k,v))
+
+删除元素：
+ del dict['key']
+
+清空dict：
+dict.clear()
+
+彻底删除dict：
+del dict
+
+dict转换为list
+
+转换value:
+dict.values()
+
+装好key:
+dict.keys()
+
+将dict的元素转换成元组，元组中的元素组成列表：
+
+dict.items()
+
+3.9后的更新，合并两个dict，如果字典里面有相同的键
+那么从左到右
+会取最后出现的值：
+
+dict1|dict2
+
+dict1|=dict2 类似 +=，
+dict1 = dict1 + dict2
+
+还能合并其他类型的数据：
+
+dict1|=[('len',18)]
+>>>{...,'len':18}
+
+合并大量字典：
+
+dicts = [{'name':'handsomeb'},{'age':18},{'len':18}]
+di = {}
+
+for d in dicts:
+     di|=d
+
+>>>di
+>>>{'name':'handsomeb','age':18,'len':18}

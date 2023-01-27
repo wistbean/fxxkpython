@@ -1,0 +1,37 @@
+文件目录操作：os 库
+
+创建文件夹：os.mkdir('new_dir')
+
+改名：os.rename('new_dir','new_name')
+
+查路径：os.getcwd()
+
+切换目录：os.chdir('new_name')
+
+删除目录：os.rmdir('详细路径')
+
+打开文件：open('new_name')
+
+指定模式：
+	只读：
+		my_file = open('new_name',mode='r')
+        写入：'w'
+例子：
+	import os
+        my_file = open('new_name',mode='wt')
+	my_file.write('hello,kelvin!')
+	my_file.close()
+
+
+模式可以组合使用：
+		my_file = open('new_name',mode='rb+') **三种模式组合
+追加内容：
+	mode = 'at'
+读取文件: my_file.read(),如果要输出内容，需要用print
+
+
+逐行读取：my_file.readline()
+
+重命名文件：os.rename
+删除文件:os.remove
+读取路径下所以文件：os.listdir('路径')
