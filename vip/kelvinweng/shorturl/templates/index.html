@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>短连接生成器</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="jumbotron text-center">
+			<h1>短链接生成器</h1>
+			<p>短就完事了</p>
+		</div>
+
+		<div class="container">
+			<form action="/gen_short_url" method="post">
+			<div class="form-group">
+				<label for="usr">请把你的长长长链接复制到这里：</label>
+				<input type="text" name="long_url" class="form-control">
+			</div>
+			<button type="submit" class="mt-1 btn btn-primary">生成</button>
+		</div>
+		
+		{%if short_url%}
+			<div class="container text-center">
+			  <label>呐～～你要的短链接来了：</label>
+			  <a href="{{short_url}}">{{short_url}}</a>
+			</div>
+		{%endif%}
+	</body>
+</html>

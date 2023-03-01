@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import pymysql
-from bases import Bases
+from bases import base62
 
 
 bases = Bases()

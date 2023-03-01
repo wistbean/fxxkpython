@@ -1,0 +1,10 @@
+1.原实现方法的bases库已经无法使用base62模块了，改用base62库
+2.用sqlite3替换mysql的实现方法，也很方便
+3.寻找方法时，还发现了pyshorteners库，其中pyshorteners.Shortener().clckru.short(),可以直接转化长链接，网上还分享了几个不同的短链域名：
+
+dagd.py
+osdb.py
+qpsru.py
+
+具体用法可以参考：longtoshort.py
+来源：https://www.jb51.net/article/268750.htm
